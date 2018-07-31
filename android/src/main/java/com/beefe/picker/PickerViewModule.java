@@ -304,8 +304,7 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
 
             int pickerViewHeight;
             String name = pickerData.getType(0).name();
-            switch (name) {
-                case "Map":
+            if (name === "Map") {
                     curStatus = 1;
                     pickerViewLinkage.setVisibility(View.VISIBLE);
                     pickerViewAlone.setVisibility(View.GONE);
@@ -324,8 +323,7 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
                         }
                     });
                     pickerViewHeight = pickerViewLinkage.getViewHeight();
-                    break;
-                default:
+            } else {
                     curStatus = 0;
                     pickerViewAlone.setVisibility(View.VISIBLE);
                     pickerViewLinkage.setVisibility(View.GONE);
@@ -345,7 +343,6 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
                     });
 
                     pickerViewHeight = pickerViewAlone.getViewHeight();
-                    break;
             }
 
             if (options.hasKey(PICKER_FONT_FAMILY)) {
