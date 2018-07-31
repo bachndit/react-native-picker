@@ -38,3 +38,8 @@ buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+android/android.iml
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+android/gradle/wrapper/gradle-wrapper.properties

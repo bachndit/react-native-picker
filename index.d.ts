@@ -172,6 +172,16 @@ interface PickerOptions {
     pickerFontColor?: number[]
 
     /**
+     * Font of the text for the items in the picker
+     *
+     * Default is Mono
+     *
+     * @type {string}
+     * @memberof PickerOptions
+     */
+    pickerFontFamily?: string
+
+    /**
      * Event fired when user confirms the picker
      *
      * Returns the selected item
