@@ -51,15 +51,12 @@ public class PickerViewAlone extends LinearLayout {
         this.onSelectedListener = listener;
     }
 
-    public void setPickerData(ReadableArray array, double[] weights) {
+    public void setPickerData(ReadableArray array, double[] weights, boolean isAlone) {
         curSelectedList = new ArrayList<>();
-        switch (array.getType(0).name()) {
-            case "Array":
-                setMultipleData(array, weights);
-                break;
-            default:
-                setAloneData(array);
-                break;
+        if (isAlone) {
+            setAloneData(array);
+        } else {
+            setMultipleData(array, weights);
         }
     }
 
