@@ -303,26 +303,26 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
             ReadableArray pickerData = options.getArray(PICKER_DATA);
 
             int pickerViewHeight;
-            if (pickerData.getType(0).equal(Map.class)) {
-                    curStatus = 1;
-                    pickerViewLinkage.setVisibility(View.VISIBLE);
-                    pickerViewAlone.setVisibility(View.GONE);
-
-                    pickerViewLinkage.setPickerData(pickerData, weights);
-                    pickerViewLinkage.setTextColor(pickerTextColor);
-                    pickerViewLinkage.setTextSize(pickerTextSize);
-                    pickerViewLinkage.setTextEllipsisLen(pickerTextEllipsisLen);
-                    pickerViewLinkage.setIsLoop(isLoop);
-
-                    pickerViewLinkage.setOnSelectListener(new OnSelectedListener() {
-                        @Override
-                        public void onSelected(ArrayList<ReturnData> selectedList) {
-                            returnData = selectedList;
-                            commonEvent(EVENT_KEY_SELECTED);
-                        }
-                    });
-                    pickerViewHeight = pickerViewLinkage.getViewHeight();
-            } else {
+//            if (pickerData.getType(0).equal(Map.class)) {
+//                    curStatus = 1;
+//                    pickerViewLinkage.setVisibility(View.VISIBLE);
+//                    pickerViewAlone.setVisibility(View.GONE);
+//
+//                    pickerViewLinkage.setPickerData(pickerData, weights);
+//                    pickerViewLinkage.setTextColor(pickerTextColor);
+//                    pickerViewLinkage.setTextSize(pickerTextSize);
+//                    pickerViewLinkage.setTextEllipsisLen(pickerTextEllipsisLen);
+//                    pickerViewLinkage.setIsLoop(isLoop);
+//
+//                    pickerViewLinkage.setOnSelectListener(new OnSelectedListener() {
+//                        @Override
+//                        public void onSelected(ArrayList<ReturnData> selectedList) {
+//                            returnData = selectedList;
+//                            commonEvent(EVENT_KEY_SELECTED);
+//                        }
+//                    });
+//                    pickerViewHeight = pickerViewLinkage.getViewHeight();
+//            } else {
                     curStatus = 0;
                     pickerViewAlone.setVisibility(View.VISIBLE);
                     pickerViewLinkage.setVisibility(View.GONE);
@@ -342,7 +342,7 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
                     });
 
                     pickerViewHeight = pickerViewAlone.getViewHeight();
-            }
+            //}
 
             if (options.hasKey(PICKER_FONT_FAMILY)) {
                 Typeface typeface = null;
