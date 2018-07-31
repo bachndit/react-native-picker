@@ -303,8 +303,7 @@ public class PickerViewModule extends ReactContextBaseJavaModule implements Life
             ReadableArray pickerData = options.getArray(PICKER_DATA);
 
             int pickerViewHeight;
-            String name = pickerData.getType(0).name();
-            if (name === "Map") {
+            if (pickerData.getType(0).equal(Map.class)) {
                     curStatus = 1;
                     pickerViewLinkage.setVisibility(View.VISIBLE);
                     pickerViewAlone.setVisibility(View.GONE);
